@@ -1,0 +1,23 @@
+A=function(x,y=4){
+  if(x<y){
+    return(x+y)
+  }else{
+    return(x*y)
+  }
+}
+B=function(x=3,y){
+  if(x-y<y){
+    return(x*y-y)
+  }else{
+    return(A(x-1,y+1))
+  }
+}
+C=function(x,y=2){
+  if(A(x,y)<=B(x+1,y-1)){
+    return(A(x,x+1)+B(y,y+1))
+  }else{
+    return(B(x+y,x-y))
+  }
+}
+length(B)
+C(5,5)
